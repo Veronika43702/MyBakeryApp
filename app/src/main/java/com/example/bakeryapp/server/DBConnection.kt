@@ -3,10 +3,17 @@ package com.example.bakeryapp.server
 import android.os.StrictMode
 import com.example.bakeryapp.dto.Component
 import com.example.bakeryapp.dto.Product
+import com.example.bakeryapp.server.DBconstants.database
+import com.example.bakeryapp.server.DBconstants.host
+import com.example.bakeryapp.server.DBconstants.password
+import com.example.bakeryapp.server.DBconstants.port
+import com.example.bakeryapp.server.DBconstants.user
+
 import java.sql.Connection
 import java.sql.DriverManager
 import java.sql.ResultSet
 import java.sql.Statement
+
 
 class DBConnection(
 ) {
