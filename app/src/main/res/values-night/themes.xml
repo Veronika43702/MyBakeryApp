@@ -1,0 +1,21 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.BakeryApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:background">@android:color/background_dark</item>
+        <item name="android:editTextBackground">@android:color/background_dark</item>
+    </style>
+    \
+    <style name="Theme.BakeryApp" parent="Base.Theme.BakeryApp" />
+
+    <style name="theme.BakeryApp.titles" parent="Base.Theme.BakeryApp" >
+        <item name="android:background">@android:color/background_dark</item>
+    </style>
+
+    <style name="theme.BakeryApp.second_title" parent="Base.Theme.BakeryApp" >
+        <item name="android:background">@android:color/background_dark</item>
+    </style>
+
+    <style name="theme.BakeryApp.third_title" parent="Base.Theme.BakeryApp" >
+        <item name="android:background">@android:color/darker_gray</item>
+    </style>
+</resources>

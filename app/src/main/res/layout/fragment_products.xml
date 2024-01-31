@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:theme="@style/Base.Theme.BakeryApp"
+    tools:context=".activity.ProductsFragment">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/common_spacing"
+        android:hint="@string/search"
+        android:paddingHorizontal="@dimen/common_spacing"
+        android:paddingTop="@dimen/common_spacing"
+        android:paddingBottom="@dimen/common_spacing"
+        android:theme="@style/theme.BakeryApp.titles"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/search_barrier"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:barrierDirection="bottom"
+        app:constraint_referenced_ids="search" />
+
+        <TableLayout
+            android:id="@+id/table_of_products"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_barrier">
+
+            <TableRow>
+
+                    <TextView
+                        android:paddingStart="@dimen/common_spacing"
+                        android:textStyle="bold"
+                        android:layout_weight="0.6"
+                        android:text="@string/name"
+
+                        />
+
+                    <TextView
+                        android:layout_weight="0.4"
+                        android:text="@string/price"
+                        android:textStyle="bold"
+                        />
+            </TableRow>
+        </TableLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>

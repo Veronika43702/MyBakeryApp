@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"    app:startDestination="@id/fragment_menu">
+
+        <fragment
+            android:id="@+id/fragment_menu"
+            android:name="com.example.bakeryapp.activity.MenuFragment"
+            android:label="fragment_menu"
+            tools:layout="@layout/fragment_menu"
+            >
+                <action
+                    android:id="@+id/action_fragment_menu_to_fragment_goods"
+                    app:destination="@id/fragment_goods" />
+                <action
+                    android:id="@+id/action_fragment_menu_to_fragment_temp_goods"
+                    app:destination="@id/fragment_temp_goods" />
+                <action
+                    android:id="@+id/action_fragment_menu_to_fragment_components"
+                    app:destination="@id/fragment_components" />
+                <action
+                    android:id="@+id/action_fragment_menu_to_fragment_products"
+                    app:destination="@id/fragment_products" />
+                <action
+                    android:id="@+id/action_fragment_menu_to_fragment_cupcake"
+                    app:destination="@id/fragment_cupcake" />
+                <action
+                    android:id="@+id/action_fragment_menu_to_fragment_cake"
+                    app:destination="@id/fragment_cake" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/fragment_goods"
+            android:name="com.example.bakeryapp.activity.GoodsFragment"
+            android:label="fragment_goods"
+            tools:layout="@layout/fragment_goods"
+            />
+
+        <fragment
+            android:id="@+id/fragment_temp_goods"
+            android:name="com.example.bakeryapp.activity.TempGoodsFragment"
+            android:label="fragment_temp_goods"
+            tools:layout="@layout/fragment_temp_goods"
+            />
+
+        <fragment
+            android:id="@+id/fragment_components"
+            android:name="com.example.bakeryapp.activity.ComponentsFragment"
+            android:label="fragment_components"
+            tools:layout="@layout/fragment_components"
+            />
+
+        <fragment
+            android:id="@+id/fragment_products"
+            android:name="com.example.bakeryapp.activity.ProductsFragment"
+            android:label="fragment_products"
+            tools:layout="@layout/fragment_products"
+            />
+
+        <fragment
+            android:id="@+id/fragment_cupcake"
+            android:name="com.example.bakeryapp.activity.CupcakeFragment"
+            android:label="fragment_cupcake"
+            tools:layout="@layout/fragment_cupcake"
+            />
+
+        <fragment
+            android:id="@+id/fragment_cake"
+            android:name="com.example.bakeryapp.activity.CakeFragment"
+            android:label="fragment_cake"
+            tools:layout="@layout/fragment_cake"
+            />
+
+</navigation>

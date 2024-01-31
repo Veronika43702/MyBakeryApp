@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BakeryApp</string>
+    <string name="title">My Backery</string>
+    <string name="goods_list">Список товаров</string>
+    <string name="cupcake_constructor">Конструктор капкейков</string>
+    <string name="cake_constructor">Конструктор торта</string>
+    <string name="add_temporary_good">Добавить временный товар</string>
+    <string name="add">Добавить товар/компонент/продукт</string>
+    <string name="temporary_list">Список временных товаров</string>
+    <string name="components_list">Список компонентов</string>
+    <string name="products_list">Список продуктов</string>
+
+    <string name="search">поиск...</string>
+
+    <string name="name">Наименование</string>
+    <string name="type">Type</string>
+    <string name="weight">Вес</string>
+    <string name="price">Цена</string>
+    <string name="price1piece">Цена 1шт</string>
+    <string name="total_price">Стоимость</string>
+
+    <string name="quantity">Количество</string>
+    <string name="diameter">Диаметр</string>
+    <string name="layer">Слои</string>
+    <string name="sponge_cake">Бисквит</string>
+    <string name="filling">Начинка</string>
+    <string name="cream">Крем</string>
+
+    <string name="quantity_input">Введите количество</string>
+    <string name="diameter_input">Введите диаметр</string>
+    <string name="layer_input">Введите количество слоев</string>
+    <string name="sponge_cake_choice">Выберите бискит</string>
+    <string name="filling_choice">Выберите начинку</string>
+    <string name="cream_choice">Выберите крем</string>
+
+    <string name="cupcake">Капкейк</string>
+    <string name="cake">Торт</string>
+
+    <string name="ingredient">Состав</string>
+    <string name="receipt">Рецепт</string>
+
+    <string name="retry_loading">Повторить</string>
+    <string name="empty_posts">Список продуктов пуст</string>
+    <string name="error_loading">Что-то пошло не так. Попробуйте позднее</string>
+</resources>

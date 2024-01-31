@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="title_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">@font/good_vibes_pro</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:theme">@style/theme.BakeryApp.titles</item>
+    </style>
+
+    <style name="first_title_text">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+
+    <style name="second_title_text">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingStart">@dimen/text_spacing</item>
+        <item name="android:layout_marginTop">@dimen/min_spacing</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:theme">@style/theme.BakeryApp.second_title</item>
+    </style>
+
+    <style name="third_title_text">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingStart">@dimen/text_spacing</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:theme">@style/theme.BakeryApp.third_title</item>
+    </style>
+
+    <style name="large_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingBottom">@dimen/common_spacing</item>
+        <item name="android:layout_marginStart">@dimen/text_spacing</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+
+    <style name="list_item_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/common_spacing</item>
+        <item name="android:layout_marginRight">@dimen/common_spacing</item>
+    </style>
+
+    <style name="table">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:stretchColumns">0</item>
+        <item name="android:paddingEnd">@dimen/table_padding</item>
+        <item name="android:paddingStart">@dimen/common_spacing</item>
+        <item name="android:paddingBottom">@dimen/min_spacing</item>
+    </style>
+
+    <style name="buttons" parent="Widget.MaterialComponents.Button.TextButton.Icon">
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:clickable">true</item>
+        <item name="android:checkable">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">@dimen/min_padding</item>
+        <item name="android:paddingTop">@dimen/min_padding</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+
+</resources>

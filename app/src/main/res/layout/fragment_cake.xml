@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/Base.Theme.BakeryApp"
+    app:layout_constraintBottom_toTopOf="@id/bottom_barrier"
+    tools:context=".activity.CakeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/title"
+                style="@style/title_text"
+                android:text="@string/cake_constructor"
+                tools:ignore="MissingConstraints" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/title_barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="title"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/cupcake_text"
+                style="@style/first_title_text"
+                android:layout_width="@dimen/width_text"
+                android:paddingStart="@dimen/text_spacing"
+                android:text="@string/cake"
+                app:layout_constraintBottom_toTopOf="@id/info_barrier"
+                app:layout_constraintTop_toBottomOf="@id/title_barrier" />
+
+            <TextView
+                android:id="@+id/weight"
+                android:layout_width="@dimen/width_text"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/min_spacing"
+                android:paddingStart="@dimen/text_spacing"
+                android:text="@string/weight"
+                app:layout_constraintStart_toStartOf="@id/weight_value"
+                app:layout_constraintTop_toBottomOf="@id/title_barrier" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="@dimen/width_text"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/min_spacing"
+                android:paddingStart="@dimen/text_spacing"
+                android:text="@string/price1piece"
+                app:layout_constraintStart_toEndOf="@id/weight"
+                app:layout_constraintTop_toBottomOf="@id/title_barrier" />
+
+
+
+            <TextView
+                android:id="@+id/weight_value"
+                android:layout_width="@dimen/width_text"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/min_spacing"
+                android:paddingStart="@dimen/text_spacing"
+                android:paddingBottom="@dimen/min_spacing"
+                android:hint="0"
+                app:layout_constraintStart_toStartOf="@id/diameter_value"
+                app:layout_constraintTop_toBottomOf="@id/price" />
+
+            <TextView
+                android:id="@+id/price_value"
+                android:layout_width="@dimen/width_text"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/min_spacing"
+                android:paddingStart="@dimen/text_spacing"
+                android:paddingBottom="@dimen/min_spacing"
+                android:hint="0"
+                app:layout_constraintStart_toEndOf="@id/weight_value"
+                app:layout_constraintTop_toBottomOf="@id/price" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/info_barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="price_value, weight_value"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/diameter_text"
+                android:layout_width="@dimen/width_text"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/min_spacing"
+                android:paddingStart="@dimen/text_spacing"
+                android:text="@string/diameter"
+                app:layout_constraintBottom_toBottomOf="@id/diameter_value"
+                app:layout_constraintTop_toBottomOf="@id/info_barrier" />
+
+            <EditText
+                android:id="@+id/diameter_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/text_spacing"
+                android:ellipsize="end"
+                android:hint="@string/diameter_input"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/sponge_text"
+                app:layout_constraintTop_toBottomOf="@id/info_barrier" />
+
+            <TextView
+                android:id="@+id/layer_text"
+                android:layout_width="@dimen/width_text"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/min_spacing"
+                android:paddingStart="@dimen/text_spacing"
+                android:text="@string/layer"
+                app:layout_constraintBottom_toBottomOf="@id/layer_value"
+                app:layout_constraintTop_toBottomOf="@id/diameter_text" />
+
+
+            <EditText
+                android:id="@+id/layer_value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/text_spacing"
+                android:ellipsize="end"
+                android:hint="@string/layer_input"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/sponge_text"
+                app:layout_constraintTop_toBottomOf="@id/diameter_value" />
+
+            <TextView
+                android:id="@+id/sponge_text"
+                android:layout_width="@dimen/width_text"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/min_spacing"
+                android:paddingStart="@dimen/text_spacing"
+                android:text="@string/sponge_cake"
+                app:layout_constraintBottom_toBottomOf="@id/sponge_list"
+                app:layout_constraintTop_toBottomOf="@id/layer_text" />
+
+            <EditText
+                android:id="@+id/sponge_list"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/text_spacing"
+                android:ellipsize="end"
+                android:hint="@string/sponge_cake_choice"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/sponge_text"
+                app:layout_constraintTop_toBottomOf="@id/layer_value" />
+
+            <TextView
+                android:id="@+id/filling_text"
+                android:layout_width="@dimen/width_text"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/min_spacing"
+                android:paddingStart="@dimen/text_spacing"
+                android:text="@string/filling"
+                app:layout_constraintBottom_toBottomOf="@id/filling_list"
+                app:layout_constraintTop_toBottomOf="@id/sponge_text" />
+
+            <EditText
+                android:id="@+id/filling_list"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/text_spacing"
+                android:ellipsize="end"
+                android:hint="@string/filling_choice"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/sponge_text"
+                app:layout_constraintTop_toBottomOf="@id/sponge_list" />
+
+            <TextView
+                android:id="@+id/cream_text"
+                android:layout_width="@dimen/width_text"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/min_spacing"
+                android:paddingStart="@dimen/text_spacing"
+                android:text="@string/cream"
+                app:layout_constraintBottom_toBottomOf="@id/cream_list"
+                app:layout_constraintTop_toBottomOf="@id/filling_text" />
+
+            <EditText
+                android:id="@+id/cream_list"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/text_spacing"
+                android:ellipsize="end"
+                android:hint="@string/cream_choice"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/sponge_text"
+                app:layout_constraintTop_toBottomOf="@id/filling_list" />
+
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/ingredient_barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="cream_list, cream_text"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/ingredient"
+                style="@style/second_title_text"
+                android:text="@string/ingredient"
+                app:layout_constraintTop_toBottomOf="@id/ingredient_barrier" />
+
+            <View
+                android:id="@+id/sponge_view"
+                style="@style/third_title_text"
+                android:text="@string/sponge_cake"
+                app:layout_constraintBottom_toBottomOf="@id/sponge_menu"
+                app:layout_constraintTop_toBottomOf="@id/ingredient" />
+
+            <TextView
+                android:id="@+id/sponge_ingredient_title"
+                style="@style/third_title_text"
+                android:layout_width="wrap_content"
+                android:text="@string/sponge_cake"
+                app:layout_constraintBottom_toBottomOf="@id/sponge_view"
+                app:layout_constraintTop_toTopOf="@id/sponge_view" />
+
+            <TextView
+                android:id="@+id/sponge_weight"
+                style="@style/third_title_text"
+                android:layout_width="wrap_content"
+                android:paddingEnd="@dimen/table_padding"
+                app:layout_constraintBottom_toBottomOf="@id/sponge_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/sponge_view"
+                tools:text="200" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sponge_menu"
+                style="@style/buttons"
+                app:icon="@drawable/menu"
+                app:iconTint="@color/standard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/sponge_view" />
+            
+            <TableLayout
+                android:id="@+id/sponge_ingredient_table"
+                style="@style/table"
+                app:layout_constraintTop_toBottomOf="@id/sponge_view">
+
+                <TableRow>
+                    <TextView tools:text="масло растительное" />
+                    <TextView tools:text="110" />
+                </TableRow>
+
+            </TableLayout>
+
+            <View
+                android:id="@+id/filling_view"
+                style="@style/third_title_text"
+                app:layout_constraintBottom_toBottomOf="@id/filling_menu"
+                app:layout_constraintTop_toBottomOf="@id/sponge_ingredient_table" />
+
+            <TextView
+                android:id="@+id/filling_ingredient_title"
+                style="@style/third_title_text"
+                android:layout_width="wrap_content"
+                android:text="@string/filling"
+                app:layout_constraintBottom_toBottomOf="@id/filling_view"
+                app:layout_constraintTop_toTopOf="@id/filling_view" />
+
+            <TextView
+                android:id="@+id/filling_weight"
+                style="@style/third_title_text"
+                android:layout_width="wrap_content"
+                android:paddingEnd="@dimen/table_padding"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/filling_view"
+                app:layout_constraintTop_toTopOf="@id/filling_view"
+                tools:text="70" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/filling_menu"
+                style="@style/buttons"
+                app:icon="@drawable/menu"
+                app:iconTint="@color/standard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/filling_view" />
+
+            <TableLayout
+                android:id="@+id/filling_ingredient_table"
+                style="@style/table"
+                app:layout_constraintTop_toBottomOf="@id/filling_ingredient_title">
+
+                <TableRow>
+
+                    <TextView tools:text="сахар" />
+                    <TextView tools:text="54" />
+                </TableRow>
+
+            </TableLayout>
+
+            <View
+                android:id="@+id/cream_view"
+                style="@style/third_title_text"
+                app:layout_constraintBottom_toBottomOf="@id/cream_menu"
+                app:layout_constraintTop_toBottomOf="@id/filling_ingredient_table" />
+
+
+            <TextView
+                android:id="@+id/cream_ingredient_title"
+                style="@style/third_title_text"
+                android:layout_width="wrap_content"
+                android:text="@string/cream"
+                app:layout_constraintBottom_toBottomOf="@id/cream_view"
+                app:layout_constraintTop_toTopOf="@id/cream_view" />
+
+            <TextView
+                android:id="@+id/cream_weight"
+                style="@style/third_title_text"
+                android:layout_width="wrap_content"
+                android:paddingEnd="@dimen/table_padding"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/cream_view"
+                app:layout_constraintTop_toTopOf="@id/cream_view"
+                tools:text="120" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cream_menu"
+                style="@style/buttons"
+                app:icon="@drawable/menu"
+                app:iconTint="@color/standard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/cream_view" />
+
+            <TableLayout
+                android:id="@+id/cream_ingredient_table"
+                style="@style/table"
+                app:layout_constraintTop_toBottomOf="@id/cream_ingredient_title">
+
+                <TableRow>
+                    <TextView tools:text="сливки" />
+                    <TextView tools:text="100" />
+                </TableRow>
+
+            </TableLayout>
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/receipt_barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="cream_ingredient_table"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/receipt"
+                style="@style/second_title_text"
+                android:text="@string/receipt"
+                app:layout_constraintTop_toBottomOf="@id/receipt_barrier" />
+
+            <View
+                android:id="@+id/sponge_receipt_view"
+                style="@style/third_title_text"
+                app:layout_constraintBottom_toBottomOf="@id/sponge_receipt_menu"
+                app:layout_constraintTop_toBottomOf="@id/receipt" />
+
+            <TextView
+                android:id="@+id/sponge_receipt_title"
+                style="@style/third_title_text"
+                android:text="@string/sponge_cake"
+                android:layout_width="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/sponge_receipt_view"
+                app:layout_constraintBottom_toBottomOf="@id/sponge_receipt_view"
+                app:layout_constraintTop_toBottomOf="@id/receipt" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sponge_receipt_menu"
+                style="@style/buttons"
+                app:icon="@drawable/menu"
+                app:iconTint="@color/standard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/sponge_receipt_view" />
+
+            <TextView
+                android:id="@+id/sponge_receipt"
+                style="@style/large_text"
+                app:layout_constraintTop_toBottomOf="@id/sponge_receipt_title" />
+
+            <View
+                android:id="@+id/filling_receipt_view"
+                style="@style/third_title_text"
+                app:layout_constraintBottom_toBottomOf="@id/filling_receipt_menu"
+                app:layout_constraintTop_toBottomOf="@id/sponge_receipt" />
+
+
+            <TextView
+                android:id="@+id/filling_receipt_title"
+                style="@style/third_title_text"
+                android:text="@string/filling"
+                android:layout_width="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/filling_receipt_view"
+                app:layout_constraintBottom_toBottomOf="@id/filling_receipt_view" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/filling_receipt_menu"
+                style="@style/buttons"
+                app:icon="@drawable/menu"
+                app:iconTint="@color/standard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/filling_receipt_view" />
+
+            <TextView
+                android:id="@+id/filling_receipt"
+                style="@style/large_text"
+                app:layout_constraintTop_toBottomOf="@id/filling_receipt_title" />
+
+            <View
+                android:id="@+id/cream_receipt_view"
+                style="@style/third_title_text"
+                app:layout_constraintBottom_toBottomOf="@id/cream_receipt_menu"
+                app:layout_constraintTop_toBottomOf="@id/filling_receipt" />
+
+            <TextView
+                android:id="@+id/cream_receipt_title"
+                style="@style/third_title_text"
+                android:layout_width="wrap_content"
+                app:layout_constraintTop_toTopOf="@id/cream_receipt_view"
+                app:layout_constraintBottom_toBottomOf="@id/cream_receipt_view"
+                android:text="@string/cream" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cream_receipt_menu"
+                style="@style/buttons"
+                app:icon="@drawable/menu"
+                app:iconTint="@color/standard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/cream_receipt_view" />
+
+            <TextView
+                android:id="@+id/cream_receipt"
+                style="@style/large_text"
+                app:layout_constraintTop_toBottomOf="@id/cream_receipt_title" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
